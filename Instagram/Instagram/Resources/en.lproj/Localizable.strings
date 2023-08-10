@@ -17,3 +17,8 @@
 "Feed.scene.title" = "Feed";
 "Feed.scene.no.more.items.text" = "No more items";
 "Feed.scene.error.text" = "An error occurred while fetching posts. Tap here to reload ↺";
+
+"SearchUsers.scene.title" = "Explore";
+"SearchUsers.scene.no.more.items.text" = "No more items";
+"SearchUsers.scene.error.text" = "An error occurred while fetching posts. Tap here to reload ↺";
+"SearchUsers.scene.search.prompt.text" = "Search users ...";

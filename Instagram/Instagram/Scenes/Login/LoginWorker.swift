@@ -21,7 +21,7 @@ class LoginWorker {
     
     func login(account: String, password: String) {
         let delay: Int = Int.random(in: 350...1000)
-        let shouldFail: Bool = Bool.random()
+        let shouldFail: Bool = Int.random(in: 0...10) > 8
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(delay)) {
             if shouldFail {

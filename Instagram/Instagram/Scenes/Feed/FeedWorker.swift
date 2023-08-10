@@ -27,20 +27,20 @@ class FeedWorker {
     
     func fetchPosts(page: Int, limit: Int) {
         let delay: Int = Int.random(in: 350...1000)
-        let shouldFail: Bool = Bool.random()
+        let shouldFail: Bool = Int.random(in: 0...10) > 8
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(delay)) {
             if shouldFail {
                 self.delegate?.failureDidFetchPosts(error: OperationError.noDataAvailable)
             } else {
-                self.delegate?.successDidFetchPosts(posts: Post.mock)
+                self.delegate?.successDidFetchPosts(posts: Post.dummyPosts)
             }
         }
     }
     
     func saveLike(postId: String) {
         let delay: Int = Int.random(in: 350...1000)
-        let shouldFail: Bool = Bool.random()
+        let shouldFail: Bool = Int.random(in: 0...10) > 8
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(delay)) {
             if shouldFail {
@@ -53,7 +53,7 @@ class FeedWorker {
     
     func removeLike(postId: String, like: Like) {
         let delay: Int = Int.random(in: 350...1000)
-        let shouldFail: Bool = Bool.random()
+        let shouldFail: Bool = Int.random(in: 0...10) > 8
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .milliseconds(delay)) {
             if shouldFail {
