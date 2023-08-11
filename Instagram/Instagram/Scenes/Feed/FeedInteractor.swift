@@ -26,6 +26,7 @@ class FeedInteractor: FeedBusinessLogic, FeedWorkerDelegate {
         if !self.paginationModel.isFetchingItems && !self.paginationModel.noMoreItems {
             self.paginationModel.isFetchingItems = true
             self.presenter?.presentLoadingState()
+            self.presenter?.presentRemoveError()
             self.worker?.fetchPosts(page: self.paginationModel.currentPage, limit: self.paginationModel.limit)
         }
     }

@@ -30,11 +30,11 @@ class Post: Identifiable, Codable {
 }
 
 extension Post {
-    static var mock: [Post] = [
-        Post(id: UUID().uuidString, caption: "Caption 1", likeCount: 1, imageUrl: "https://picsum.photos/400/600", user: User.mock[0], createdAt: Date()),
-        Post(id: UUID().uuidString, caption: "Caption 2", likeCount: 2, imageUrl: "https://picsum.photos/400/600", user: User.mock[1], createdAt: Date()),
-        Post(id: UUID().uuidString, caption: "Caption 3", likeCount: 3, imageUrl: "https://picsum.photos/400/600", user: User.mock[2], createdAt: Date()),
-        Post(id: UUID().uuidString, caption: "Caption 4", likeCount: 4, imageUrl: "https://picsum.photos/400/600", user: User.mock[3], createdAt: Date()),
-        Post(id: UUID().uuidString, caption: "Caption 5", likeCount: 5, imageUrl: "https://picsum.photos/400/600", user: User.mock[4], createdAt: Date()),
+    static var dummyPosts: [Post] = [
+        Post(id: UUID().uuidString, caption: "Caption 1", likeCount: 1, imageUrl: "https://picsum.photos/400/600", user: User.dummyUsers[0], createdAt: Date()),
+        Post(id: UUID().uuidString, caption: "Caption 2", likeCount: 2, imageUrl: "https://picsum.photos/400/600", user: User.dummyUsers[1], createdAt: Date()),
+        Post(id: UUID().uuidString, caption: "Caption 3", likeCount: 3, imageUrl: "https://picsum.photos/400/600", user: User.dummyUsers[2], createdAt: Date()),
+        Post(id: UUID().uuidString, caption: "Caption 4", likeCount: 4, imageUrl: "https://picsum.photos/400/600", user: User.dummyUsers[3], createdAt: Date()),
+        Post(id: UUID().uuidString, caption: "Caption 5", likeCount: 5, imageUrl: "https://picsum.photos/400/600", user: User.dummyUsers[4], createdAt: Date()),
     ]
 }
